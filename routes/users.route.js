@@ -3,8 +3,9 @@ import { profile, register, getAllUser } from "../controllers/user.controller.js
 
 const router = express.Router();
 
-// router.get('/user', user );
+
 router.get("/user", getAllUser)
+// router.get('/user', user );
 router.get('/profile', profile);    
 router.post('/register', register);
 

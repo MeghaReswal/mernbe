@@ -1,6 +1,7 @@
 import express from "express"
 import mongoose from "mongoose"
 import usersRoute from "./routes/users.route.js"
+import productsRoute from "./routes/products.route.js"
 import {findInDb} from "./database.js"
 import  cors from "cors"
 const URL = process.env.ECOMM_DB || 'mongodb://localhost:27017/e-comm' ;
@@ -19,6 +20,7 @@ const connect = async () => {
 }
 
 app.use("/api/users", usersRoute)
+app.use("/api/products", productsRoute)
 
 
 app.listen(PORT, async () => {

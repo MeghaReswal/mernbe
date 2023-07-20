@@ -1,4 +1,3 @@
-// import mongoose from "mongoose"
 import User from "../model/User.js";
 
 export const getAllUser = async (req, res) => {
@@ -10,7 +9,9 @@ export const getAllUser = async (req, res) => {
             message: 'success!',
             data: users
         })
-
+        if (!users) {
+            return res.status(404).json({ message: "no user find" });
+        }
     } catch (error) {
         console.log('err in getuser controller:', error)
         res.status(201).json({
@@ -18,10 +19,9 @@ export const getAllUser = async (req, res) => {
             message: error.response
         })
     }
-    if (!users) {
-        return res.status(404).json({ message: "no user find" });
-    }
-    return res.status(200).json({ users })
+
+
+    // return res.status(200).json({ users })
 }
 
 
