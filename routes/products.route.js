@@ -3,9 +3,8 @@ import {getAllProducts, createProduct, addToCart  } from "../controllers/product
 
 const router = express.Router();
 
-
 router.get("/product", getAllProducts)
 router.get('/createproduct', createProduct);    
-router.post('/addtocart', addToCart);
+router.get('/addtocart', addToCart);
 
 export default router;

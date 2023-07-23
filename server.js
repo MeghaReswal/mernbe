@@ -4,9 +4,13 @@ import usersRoute from "./routes/users.route.js"
 import productsRoute from "./routes/products.route.js"
 import {findInDb} from "./database.js"
 import  cors from "cors"
+import dotenv from "dotenv"
+dotenv.config();
+
 const URL = process.env.ECOMM_DB || 'mongodb://localhost:27017/e-comm' ;
 
 const PORT = process.env.PORT || 2000;
+// console.log("process" ,process.env)
 
 const app = express()
 app.use(cors())

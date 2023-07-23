@@ -1,7 +1,5 @@
 import Product from "../model/product.js";
 
-
-
 export const getAllProducts = async (req, res) => {
     let products;
     try {
@@ -21,24 +19,14 @@ export const getAllProducts = async (req, res) => {
             message: error.response
         })
     }
-
-
-    // return res.status(200).json({ users })
 }
 
-
-
 export const createProduct = async (req, res) => {
-    const { body } = req
-
     res.send("from createProduct controller")
-
 } 
 
 
 export const addToCart = async (req, res) => {
-    const { body } = req
-
     res.send("from addToCart controller")
 
 } 
