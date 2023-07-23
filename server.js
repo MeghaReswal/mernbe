@@ -7,7 +7,7 @@ import  cors from "cors"
 import dotenv from "dotenv"
 dotenv.config();
 
-const URL = process.env.ECOMM_DB || 'mongodb://localhost:27017/e-comm' ;
+const URL = process.env.MONGODB_CONNECT_URI  ;
 
 const PORT = process.env.PORT || 2000;
 // console.log("process" ,process.env)
