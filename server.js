@@ -9,7 +9,7 @@ dotenv.config();
 
 const URL = process.env.MONGODB_CONNECT_URI  ;
 
-const PORT = process.env.PORT || 2000;
+const PORT = process.env.PORT ;
 console.log("process" ,process.env.MONGODB_CONNECT_URI)
 
 
