@@ -2,7 +2,6 @@ import express from "express"
 import mongoose from "mongoose"
 import usersRoute from "./routes/users.route.js"
 import productsRoute from "./routes/products.route.js"
-import {findInDb} from "./database.js"
 import  cors from "cors"
 import dotenv from "dotenv"
 dotenv.config();
